@@ -18,6 +18,8 @@ pylint = "^2.13.5"
 mypy = "^0.942"
 pytest = "^7.1.1"
 pytest-cov = "^3.0.0"
+pytest-datafiles = "^2.0"
+pytest-dotenv = "^0.5.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -31,3 +33,13 @@ module = [
     "pandas.*"
 ]
 ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+markers = "datafiles"
+[tool.pytest]
+env_files = [
+    ".test.env"
+]
+
+[tool.coverage.run]
+omit = "src/greek_interjections/main.py"

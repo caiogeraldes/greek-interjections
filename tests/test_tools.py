@@ -1,4 +1,4 @@
-from greek_interjections.tools import gen_sentence
+from greek_interjections.tools import gen_sentence, gen_dataframe
 
 
 def test_gen_sentence():
@@ -253,3 +253,27 @@ def test_gen_sentence():
     )
     output = gen_sentence(source)
     assert output == expected
+
+
+def test_gen_dataframe():
+    source = [
+        {
+            "author": "Euripides",
+            "text": "Electra",
+            "location": "1",
+            "interjection": "ὦ",
+            "sentence_position": "1",
+            "sentence": "ὦ γῆς παλαιὸν ἄργος, "
+            "Ἰνάχου ῥοαί, ὅθεν ποτʼ ἄρας ναυσὶ χιλίαις "
+            "Ἄρη ἐς γῆν ἔπλευσε Τρῳάδ ̓ Ἀγαμέμνων ἄναξ.",
+        }
+    ]
+    output = gen_dataframe(source)
+    assert list(output.columns) == [
+        "author",
+        "text",
+        "location",
+        "interjection",
+        "sentence_position",
+        "sentence",
+    ]
