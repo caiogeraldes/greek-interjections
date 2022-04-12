@@ -17,7 +17,6 @@ assert data_path is not None, "Path para DATA não especificada"
 DATA_PATH = Path(data_path)
 
 
-
 if __name__ == "__main__":  # pragma: no cover
     results = bulk_find(DIORISIS_PATH)
     data_frame = gen_dataframe(results)
