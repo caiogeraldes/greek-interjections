@@ -125,15 +125,6 @@ class BetaCodeReplacer:  # pylint: disable=E1101,R0903
     def replace_beta_code(self, text: str) -> str:
         """Replace method. Note: regex.subn() returns a tuple (new_string,
         number_of_subs_made).
-
-        >>> from cltk.alphabet.grc.beta_to_unicode import BetaCodeReplacer
-        >>> beta_code_replace = BetaCodeReplacer()
-        >>> beta_code_str = r"*XALDAI+KH\\N"
-        >>> beta_code_replace.replace_beta_code(beta_code_str)
-        'Χαλδαϊκὴν'
-        >>> beta_code_str = "proi+sxome/nwn"
-        >>> beta_code_replace.replace_beta_code(beta_code_str)
-        'προϊσχομένων'
         """
 
         # Accounts for cases in which the whole string is upper case, leaving only
