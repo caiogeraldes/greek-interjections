@@ -17,15 +17,8 @@ assert data_path is not None, "Path para DATA não especificada"
 DATA_PATH = Path(data_path)
 
 
-def main() -> None:
-    """
-    TODO
-    @return:
-    """
+
+if __name__ == "__main__":  # pragma: no cover
     results = bulk_find(DIORISIS_PATH)
     data_frame = gen_dataframe(results)
     data_frame.to_csv(os.path.join(DATA_PATH, "data.csv"), index=False)
-
-
-if __name__ == "__main__":  # pragma: no cover
-    main()
