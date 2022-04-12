@@ -25,6 +25,7 @@ def main():
     results = bulk_find(diorisis_path)
     data_frame = gen_dataframe(results)
     data_frame.to_csv(os.path.join(data_path, "data.csv"), index=False)
+    data_frame.to_excel(os.path.join(data_path, "data.xlsx"), index=False)
 
 
 if __name__ == "__main__":  # pragma: no cover
