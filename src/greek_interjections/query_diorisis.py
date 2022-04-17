@@ -6,7 +6,7 @@ import json
 from os import PathLike
 from typing import List, Optional
 import regex
-from greek_interjections.types import DiorisisDocument, DiorisisSentence
+from greek_interjections.diorisistypes import DiorisisDocument, DiorisisSentence
 from greek_interjections.tools import gen_sentence
 from greek_interjections.beta_to_unicode import BetaCodeReplacer
 

@@ -4,7 +4,7 @@ TODO
 from typing import List, Optional
 import pandas as pd
 import regex
-from greek_interjections.types import DiorisisSentence
+from greek_interjections.diorisistypes import DiorisisSentence
 from greek_interjections.beta_to_unicode import BetaCodeReplacer
 
 
